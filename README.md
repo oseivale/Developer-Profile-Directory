@@ -129,3 +129,58 @@ Final Tips
 	•	Focus on one feature at a time.
 	•	Don’t be afraid to Google or ask for help.
 	•	Have fun and make it your own!
+
+
+# 🌐 Stretch Challenge 1: Integrate Contentful CMS
+
+Welcome to your **first stretch goal**! In this challenge, you’ll level up by replacing hardcoded profile data with content fetched from **Contentful**, a headless CMS. This is a powerful and widely used tool in modern web development.
+
+---
+
+## 🎯 Objective
+
+Replace the locally stored or hardcoded developer profiles in your project with **Contentful-managed content**.
+
+You’ll:
+- Set up a Contentful space
+- Define a content model for developer profiles
+- Add sample entries via the Contentful web app
+- Fetch content in your Next.js app using the Contentful API
+- Render that content in your directory page
+
+---
+
+## 🧱 Prerequisites
+
+- A free [Contentful account](https://www.contentful.com/)
+- Your DevLink project running locally
+
+---
+
+## 🛠️ Step-by-Step Instructions
+
+### 1️⃣ Set Up Contentful
+
+1. **Create a space** in your Contentful dashboard.
+2. Go to **Content model**, then click **Add Content Type**:
+   - Name: `DeveloperProfile`
+   - Fields:
+     - `Full Name` – Text (Short Text)
+     - `Title` – Text (Short Text)
+     - `Bio` – Text (Long Text)
+     - `Tech Stack` – Text (Short Text or list of Tags)
+     - `GitHub URL` – Text (Short Text)
+     - `LinkedIn URL` – Text (Short Text)
+     - `Personal Website` – Text (Short Text)
+     - `Profile Image` – Media (Asset → Image)
+
+3. Add **at least 5 entries** to get started.
+
+---
+
+### 2️⃣ Install and Configure Contentful Client
+
+1. Install the Contentful SDK in your project:
+
+```bash
+pnpm add contentful
